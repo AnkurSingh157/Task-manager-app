@@ -1,0 +1,189 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #4A90E2, #F5A623);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #fff;
+    transition: background 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background: #333;
+    color: #ffffff;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* Adventure Icons */
+.theme-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.theme-toggle input[type="checkbox"] {
+    display: none;
+}
+
+.theme-toggle label {
+    cursor: pointer;
+    font-size: 24px;
+    color: #FFD700; /* Gold color for adventure theme */
+}
+
+/* Task Input & Filters */
+.task-input, .filters {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.task-input input[type="text"], 
+input[type="date"], 
+select {
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.task-input input[type="text"]:focus, 
+input[type="date"]:focus, 
+select:focus {
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 5px rgba(255, 223, 186, 0.7);
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 16px;
+    background: linear-gradient(90deg, #D35400, #E67E22);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    font-weight: bold;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #E67E22, #D35400);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 20px rgba(255, 165, 0, 0.6);
+}
+
+/* Progress Bar */
+.progress-container {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    height: 20px;
+    background-color: #FFD700; /* Gold color for progress */
+    width: 0%;
+    transition: width 0.5s;
+}
+
+#progress {
+    height: 100%;
+    color: black;
+    text-align: center;
+}
+
+/* Task List Styles */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    margin-bottom: 10px;
+    transition: background 0.3s, transform 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+li.completed {
+    background-color: rgba(0, 255, 0, 0.2);
+    text-decoration: line-through;
+    color: #95a5a6;
+}
+
+li:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Priority Icons */
+.priority {
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.priority.Low {
+    background-color: rgba(52, 152, 219, 0.5);
+}
+
+.priority.Medium {
+    background-color: rgba(241, 196, 15, 0.5);
+}
+
+.priority.High {
+    background-color: rgba(231, 76, 60, 0.5);
+}
+
+/* Footer Button */
+#clear-completed-btn {
+    background: rgba(44, 62, 80, 0.8);
+    color: white;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+#clear-completed-btn:hover {
+    background: rgba(44, 62, 80, 1);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}

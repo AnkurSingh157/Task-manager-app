@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <title>Task Manager</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Task Manager</h1>
+        <div class="theme-toggle">
+            <label for="toggle">🌙</label>
+            <input type="checkbox" id="toggle" />
+            <label for="toggle">🌞</label>
+        </div>
+        <div class="task-input">
+            <input type="text" id="task-input" placeholder="Add a new task..." />
+            <input type="date" id="task-deadline" />
+            <select id="task-priority">
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
+            <button id="add-task-btn">Add Task</button>
+        </div>
+        <div class="filters">
+            <select id="filter-priority">
+                <option value="All">All</option>
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
+            <select id="filter-status">
+                <option value="All">All</option>
+                <option value="Completed">Completed</option>
+                <option value="Incomplete">Incomplete</option>
+            </select>
+        </div>
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div id="progress" style="width: 0%;">0%</div>
+            </div>
+        </div>
+        <ul id="task-list"></ul>
+        <button id="clear-completed-btn">Clear Completed Tasks</button>
+    </div>
+</body>
+</html>
